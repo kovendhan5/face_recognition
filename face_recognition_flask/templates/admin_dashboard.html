@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Attendance Dashboard</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Roll Number</th>
+            <th>Time</th>
+        </tr>
+        {% for i in range(l) %}
+        <tr>
+            <td>{{ names[i] }}</td>
+            <td>{{ rolls[i] }}</td>
+            <td>{{ times[i] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('attendance_analytics') }}">View Analytics</a>
+    <a href="{{ url_for('admin_logout') }}">Logout</a>
+</body>
+</html>
